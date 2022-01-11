@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "outDir": "./dist/",
     "sourceMap": true,
-    "outDir": "/dist"
-  },
-  "include": ["src/**/*"]
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "moduleResolution": "node"
+  }
 }

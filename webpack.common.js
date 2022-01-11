@@ -1,9 +1,14 @@
 module.exports = {
   entry: {
-    index: './src/index.js',
+    index: './src/index.ts',
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'], // Loads in reverse order, and css must be loaded before style
@@ -17,5 +22,8 @@ module.exports = {
         type: 'asset/resource',
       },
     ],
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
 };

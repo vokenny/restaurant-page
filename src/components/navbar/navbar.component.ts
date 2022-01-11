@@ -1,6 +1,6 @@
 import './navbar.style.css';
 
-export const NavbarComponent = (function () {
+export const NavbarComponent = function () {
   'use strict';
 
   function hello() {
@@ -12,4 +12,4 @@ export const NavbarComponent = (function () {
   }
 
   document.body.appendChild(hello());
-})();
+};
