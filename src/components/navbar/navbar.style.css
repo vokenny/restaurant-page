@@ -1,3 +1,19 @@
-.hello {
-  color: red;
+.navbar {
+  background-color: yellow;
+  color: black;
+  padding: 4rem;
+}
+
+.nav-links {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  font-style: normal;
+  font-size: large;
+  text-align: center;
+  display: inline;
 }

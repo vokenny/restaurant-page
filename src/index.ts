@@ -1,4 +1,6 @@
 import './style.css';
-import { HomePage } from './modules/home/home';
+import NavbarComponent from './components/navbar/navbar.component';
 
-HomePage();
+// TODO: Style things better once everything's in place
+
+document.body.appendChild(NavbarComponent());

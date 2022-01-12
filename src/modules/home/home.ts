@@ -1,7 +1,8 @@
-import { NavbarComponent } from '../../components/navbar/navbar.component';
-
-export const HomePage = function () {
+export default function HomePage(): Node {
   'use strict';
 
-  NavbarComponent();
-};
+  // Parent main element
+  const homePage = document.createElement('main');
+
+  return homePage;
+}
