@@ -15,16 +15,33 @@ export default function HeroCarousel(): Node {
   heroCarouselElem.classList.add('hero-carousel');
 
   function createHeroImgElem(source: any, idx: number): HTMLDivElement {
-    const heroImgContainer: HTMLDivElement = document.createElement('div');
-    const heroImgElem = new Image();
+    const heroImgElem: HTMLImageElement = new Image();
     heroImgElem.src = source;
     heroImgElem.classList.add('hero');
+    heroImgElem.dataset.id = idx.toString();
 
     if (idx === 0) heroImgElem.classList.add('active');
 
-    heroImgContainer.append(heroImgElem);
+    heroImgElem.addEventListener('click', (evt) => showNextImage(evt));
 
-    return heroImgContainer;
+    return heroImgElem;
+  }
+
+  function calcNextId(currentId: string): string {
+    const currId: number = parseInt(currentId);
+
+    return currId === HERO_IMAGES.length - 1 ? '0' : `${currId + 1}`;
+  }
+
+  function showNextImage(evt: MouseEvent): void {
+    const currImg: HTMLElement = evt.target as HTMLElement;
+    const nextId: string = calcNextId(currImg.dataset.id);
+    const nextImg: HTMLElement = document.querySelector(
+      `.hero[data-id="${nextId}"]`
+    ) as HTMLElement;
+
+    currImg.classList.remove('active');
+    nextImg.classList.add('active');
   }
 
   const heroImgElems: HTMLDivElement[] = HERO_IMAGES.map(createHeroImgElem);

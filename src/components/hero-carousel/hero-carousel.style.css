@@ -1,7 +1,7 @@
 .hero-carousel {
   margin: 3em;
   padding: 0;
-  max-width: 800px;
+  max-width: 1000px;
   border-radius: 15% 0px;
   border: var(--primary-color) 2px solid;
   overflow: hidden;
