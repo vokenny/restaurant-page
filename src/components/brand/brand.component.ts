@@ -1,6 +1,6 @@
 import './brand.style.css';
 
-export default function BrandComponent(): Node {
+export default function Brand(): Node {
   'use strict';
 
   const brandElem: HTMLDivElement = document.createElement('div');

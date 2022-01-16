@@ -1,7 +1,7 @@
 import './navbar.style.css';
-import BrandComponent from '../brand/brand.component';
+import Brand from '../brand/brand.component';
 
-export default function NavbarComponent(): Node {
+export default function Navbar(): Node {
   'use strict';
 
   const LINKS: string[] = ['Home', 'Menu', 'Contact'];
@@ -27,7 +27,7 @@ export default function NavbarComponent(): Node {
   const linkElems: HTMLElement[] = LINKS.map(createLinkElem);
   navLinkContainer.append(...linkElems);
 
-  navElem.append(BrandComponent());
+  navElem.append(Brand());
   navElem.append(navLinkContainer);
 
   return navElem;
