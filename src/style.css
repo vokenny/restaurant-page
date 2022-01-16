@@ -1,3 +1,9 @@
+:root {
+  --main-bg: #48686f;
+  --banner-bg: #283d3e;
+  --primary-color: #ffffc0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +14,8 @@ body {
 }
 
 body {
-  background-color: azure;
+  background-color: var(--main-bg);
   font-family: 'GFS Neohellenic', sans-serif;
   font-style: italic;
+  color: var(--primary-color);
 }

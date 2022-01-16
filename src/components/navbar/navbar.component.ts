@@ -9,11 +9,11 @@ export default function NavbarComponent(): Node {
   const navElem: HTMLElement = document.createElement('nav');
   navElem.classList.add('navbar');
 
-  const navLinkContainer: HTMLElement = document.createElement('div');
+  const navLinkContainer: HTMLUListElement = document.createElement('ul');
   navLinkContainer.classList.add('nav-links');
 
   function createLinkElem(content: string): HTMLElement {
-    const linkElem: HTMLDivElement = document.createElement('div');
+    const linkElem: HTMLLIElement = document.createElement('li');
     const anchorElem: HTMLAnchorElement = document.createElement('a');
 
     linkElem.append(anchorElem);

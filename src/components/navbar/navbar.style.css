@@ -1,19 +1,36 @@
+@property --offset {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0;
+}
+
 .navbar {
-  background-color: yellow;
-  color: black;
-  padding: 4rem;
+  background-color: var(--banner-bg);
+  padding: 1.5em;
 }
 
 .nav-links {
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto;
+  padding: 0;
   display: flex;
   justify-content: space-between;
 }
 
 .nav-link {
+  display: inline;
   font-style: normal;
-  font-size: large;
+  font-size: x-large;
   text-align: center;
   display: inline;
+  text-underline-offset: var(--offset, 0.2em);
+  transition: --offset 400ms, text-decoration-color 400ms;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  cursor: pointer;
+  text-decoration: underline;
+  --offset: 0.4em;
+  text-decoration-color: orange;
 }
