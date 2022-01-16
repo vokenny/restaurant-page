@@ -2,7 +2,7 @@ export default function HomePage(): Node {
   'use strict';
 
   // Parent main element
-  const homePage = document.createElement('main');
+  const homePage: HTMLElement = document.createElement('main');
 
   return homePage;
 }
