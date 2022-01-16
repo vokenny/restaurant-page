@@ -6,6 +6,9 @@ import PizzaPrep from '../../assets/pizza-prep.jpg';
 export default function HeroCarousel(): Node {
   'use strict';
 
+  // TODO: Add other hero images in timed sliding carousel
+  // TODO: Add overlay to carousel for short description text
+
   // const HERO_IMAGES: any[] = [PizzaPrep, PizzaReady, PizzaServe];
 
   const heroCarouselElem: HTMLDivElement = document.createElement('div');
