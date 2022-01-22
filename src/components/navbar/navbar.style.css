@@ -1,9 +1,3 @@
-@property --offset {
-  syntax: '<length>';
-  inherits: false;
-  initial-value: 0;
-}
-
 .navbar {
   background-color: var(--banner-bg);
   padding: 1.5em;
@@ -19,17 +13,5 @@
 
 .nav-link {
   display: inline;
-  font-style: normal;
   font-size: x-large;
-  text-align: center;
-  text-underline-offset: var(--offset, 0.2em);
-  transition: --offset 400ms, text-decoration-color 400ms;
-}
-
-.nav-link:hover,
-.nav-link:focus {
-  cursor: pointer;
-  text-decoration: underline;
-  --offset: 0.4em;
-  text-decoration-color: orange;
 }

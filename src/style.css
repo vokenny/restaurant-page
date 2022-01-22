@@ -4,6 +4,12 @@
   --primary-color: #ffffc0;
 }
 
+@property --offset {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -28,4 +34,19 @@ body {
 .main {
   display: flex;
   justify-content: center;
+}
+
+.link {
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  text-underline-offset: var(--offset, 0.2em);
+  transition: --offset 400ms, text-decoration-color 400ms;
+}
+
+.link:hover,
+.link:focus {
+  cursor: pointer;
+  text-decoration: underline;
+  --offset: 0.4em;
 }

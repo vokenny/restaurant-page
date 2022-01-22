@@ -17,7 +17,7 @@ export default function Navbar(): Node {
     const anchorElem: HTMLAnchorElement = document.createElement('a');
 
     linkElem.append(anchorElem);
-    linkElem.classList.add('nav-link');
+    linkElem.classList.add('link', 'nav-link');
     anchorElem.textContent = content;
     anchorElem.classList.add('link');
 
