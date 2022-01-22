@@ -22,7 +22,6 @@
   font-style: normal;
   font-size: x-large;
   text-align: center;
-  display: inline;
   text-underline-offset: var(--offset, 0.2em);
   transition: --offset 400ms, text-decoration-color 400ms;
 }
