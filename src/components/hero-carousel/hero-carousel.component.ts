@@ -4,9 +4,7 @@ import PizzaReady from '../../assets/pizza-ready.jpg';
 import PizzaServe from '../../assets/pizza-serve.jpg';
 
 export default function HeroCarousel(): Node {
-  'use strict';
-
-  // TODO: Add other hero images in timed sliding carousel
+  // TODO: Timed sliding carousel for hero images
   // TODO: Add overlay to carousel for short description text
 
   const HERO_IMAGES: any[] = [PizzaPrep, PizzaReady, PizzaServe];
@@ -35,6 +33,10 @@ export default function HeroCarousel(): Node {
 
   function showNextImage(evt: MouseEvent): void {
     const currImg: HTMLElement = evt.target as HTMLElement;
+
+    if (!currImg.dataset.id)
+      throw new Error('data-id attr not found on clicked element');
+
     const nextId: string = calcNextId(currImg.dataset.id);
     const nextImg: HTMLElement = document.querySelector(
       `.hero[data-id="${nextId}"]`
