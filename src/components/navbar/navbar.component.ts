@@ -1,6 +1,8 @@
 import './navbar.style.css';
 import Brand from '../brand/brand.component';
 
+// TODO: Create controller to handle click events
+
 export default function Navbar(): Node {
   'use strict';
 
