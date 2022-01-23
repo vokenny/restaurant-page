@@ -31,6 +31,7 @@ export default function HeroCarousel(): Node {
     return currId === HERO_IMAGES.length - 1 ? '0' : `${currId + 1}`;
   }
 
+  // TODO: Move this to a controller
   function showNextImage(evt: MouseEvent): void {
     const currImg: HTMLElement = evt.target as HTMLElement;
 
