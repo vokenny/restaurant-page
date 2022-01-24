@@ -1,10 +1,9 @@
 import './navbar.style.css';
 import Brand from '../brand/brand.component';
-
-// TODO: Create controller to handle click events
+import NavbarController from './navbar.controller';
 
 export default function Navbar(): Node {
-  'use strict';
+  const navbarCtrl = NavbarController();
 
   const LINKS: string[] = ['Home', 'Menu', 'Contact'];
 
@@ -22,6 +21,8 @@ export default function Navbar(): Node {
     linkElem.classList.add('link', 'nav-link');
     anchorElem.textContent = content;
     anchorElem.classList.add('link');
+
+    linkElem.addEventListener('click', (evt) => navbarCtrl.renderNewPage(evt));
 
     return linkElem;
   }
