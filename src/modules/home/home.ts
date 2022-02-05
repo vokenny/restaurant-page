@@ -1,4 +1,5 @@
 import HeroCarousel from '../../components/hero-carousel/hero-carousel.component';
+import OpeningHours from '../../components/opening-hours/opening-hours.component';
 
 export default function HomePage(): Node {
   // Parent main element
@@ -6,8 +7,9 @@ export default function HomePage(): Node {
   homePage.classList.add('main');
 
   const heroCarousel = HeroCarousel();
+  const openingHours = OpeningHours();
 
-  homePage.append(heroCarousel);
+  homePage.append(heroCarousel, openingHours);
 
   return homePage;
 }
