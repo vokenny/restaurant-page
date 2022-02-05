@@ -16,6 +16,11 @@
   display: none;
 }
 
+.hero:hover,
+.hero:focus {
+  cursor: pointer;
+}
+
 .active {
   display: block;
 }
