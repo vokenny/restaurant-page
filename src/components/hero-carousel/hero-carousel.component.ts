@@ -3,8 +3,9 @@ import './hero-carousel.style.css';
 import { HERO_IMAGES } from './hero-images';
 
 export default function HeroCarousel(): Node {
-  // TODO: Timed sliding carousel for hero images
   // TODO: Add overlay to carousel for short description text
+  // TODO: Sliding animation on image change
+  // TODO: Timed sliding carousel for hero images
 
   const heroCtrl = HeroCarouselController();
 
