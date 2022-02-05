@@ -1,3 +1,5 @@
+import './opening-hours.style.css';
+
 import Details from '../details/details.component';
 
 export default function OpeningHours(): Node {
@@ -12,10 +14,12 @@ export default function OpeningHours(): Node {
   };
 
   const contentElem: HTMLUListElement = document.createElement('ul');
+  contentElem.classList.add('opening-hours');
 
   const listElems: HTMLLIElement[] = Object.entries(OPENING_HOURS).map(
     ([day, hours]: [string, string]): HTMLLIElement => {
       const listElem: HTMLLIElement = document.createElement('li');
+      listElem.classList.add('hours');
       listElem.textContent = `${day}: ${hours}`;
 
       return listElem;
@@ -24,5 +28,5 @@ export default function OpeningHours(): Node {
 
   contentElem.append(...listElems);
 
-  return Details('Opening Hours', contentElem);
+  return Details('Opening hours', contentElem);
 }
