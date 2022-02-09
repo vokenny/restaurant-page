@@ -7,6 +7,10 @@ export default function NavbarController() {
     // Do nothing if the nav link is already active
     if (anchorElem.classList.contains('active')) return;
 
+    const allNavLinks = document.querySelectorAll('.nav-link > a');
+    allNavLinks.forEach((link) => link.classList.remove('active'));
+    anchorElem.classList.add('active');
+
     const requestedPage: string | undefined = PAGE_LINKS.find(
       (link) => link === anchorElem.textContent
     );
@@ -16,19 +20,14 @@ export default function NavbarController() {
         `Unable to determine the requested page. Received: ${anchorElem.textContent}`
       );
 
-    switch (requestedPage) {
-      case 'Menu':
-        document.querySelector('.main')?.replaceChildren(PAGE_OBJECTS.Menu());
-        break;
-      case 'Contact':
-        document
-          .querySelector('.main')
-          ?.replaceChildren(PAGE_OBJECTS.Contact());
-        break;
-      default:
-        document.querySelector('.main')?.replaceChildren(PAGE_OBJECTS.Home());
-        break;
-    }
+    const pageObj =
+      requestedPage === 'Menu'
+        ? PAGE_OBJECTS.Menu
+        : requestedPage === 'Contact'
+        ? PAGE_OBJECTS.Contact
+        : PAGE_OBJECTS.Home;
+
+    document.querySelector('.main')?.replaceChildren(pageObj());
   }
 
   return { renderNewPage };
