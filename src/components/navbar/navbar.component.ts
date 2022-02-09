@@ -1,11 +1,10 @@
 import './navbar.style.css';
 import Brand from '../brand/brand.component';
 import NavbarController from './navbar.controller';
+import { PAGE_LINKS } from '../../modules/page-routes';
 
 export default function Navbar(): Node {
   const navbarCtrl = NavbarController();
-
-  const LINKS: string[] = ['Home', 'Menu', 'Contact'];
 
   const navElem: HTMLElement = document.createElement('nav');
   navElem.classList.add('navbar');
@@ -22,12 +21,15 @@ export default function Navbar(): Node {
     anchorElem.textContent = content;
     anchorElem.classList.add('link');
 
+    // Home is default active when Navbar is initially loaded
+    if (content === 'Home') anchorElem.classList.add('active');
+
     linkElem.addEventListener('click', (evt) => navbarCtrl.renderNewPage(evt));
 
     return linkElem;
   }
 
-  const linkElems: HTMLElement[] = LINKS.map(createLinkElem);
+  const linkElems: HTMLElement[] = PAGE_LINKS.map(createLinkElem);
   navLinkContainer.append(...linkElems);
 
   navElem.append(Brand());
