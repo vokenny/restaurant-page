@@ -4,8 +4,8 @@ export default function NavbarController() {
   function renderNewPage(evt: any): void {
     const anchorElem: HTMLElement = evt.target as HTMLElement;
 
-    // // Do nothing if the nav link is already active
-    // if (anchorElem.classList.contains('active')) return;
+    // Do nothing if the nav link is already active
+    if (anchorElem.classList.contains('active')) return;
 
     const requestedPage: string | undefined = PAGE_LINKS.find(
       (link) => link === anchorElem.textContent
