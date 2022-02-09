@@ -21,6 +21,6 @@
   cursor: pointer;
 }
 
-.active {
+.hero.active {
   display: block;
 }
