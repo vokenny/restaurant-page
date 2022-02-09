@@ -7,6 +7,8 @@ export default function MenuPage(): Node {
   const title: Node = document.createElement('h1');
   title.textContent = 'Menu';
 
+  // TODO: Add 12 or so pizzas with card tile components
+
   menuPage.append(title);
 
   return menuPage;

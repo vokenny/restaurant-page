@@ -7,6 +7,8 @@ export default function ContactPage(): Node {
   const title: Node = document.createElement('h1');
   title.textContent = 'Contact';
 
+  // TODO: Add fake contact details using detail component
+
   contactPage.append(title);
 
   return contactPage;
