@@ -7,7 +7,8 @@ export default function NavbarController() {
     // Do nothing if the nav link is already active
     if (anchorElem.classList.contains('active')) return;
 
-    const allNavLinks = document.querySelectorAll('.nav-link > a');
+    const allNavLinks: NodeListOf<Element> =
+      document.querySelectorAll('.nav-link > a');
     allNavLinks.forEach((link) => link.classList.remove('active'));
     anchorElem.classList.add('active');
 
@@ -20,7 +21,7 @@ export default function NavbarController() {
         `Unable to determine the requested page. Received: ${anchorElem.textContent}`
       );
 
-    const pageObj =
+    const pageObj: () => Node =
       requestedPage === 'Menu'
         ? PAGE_OBJECTS.Menu
         : requestedPage === 'Contact'
