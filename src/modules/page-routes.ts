@@ -1,6 +1,6 @@
-import ContactPage from './contact/contact';
-import HomePage from './home/home';
-import MenuPage from './menu/menu';
+import ContactPage from './contact/contact-page.component';
+import HomePage from './home/home-page.component';
+import MenuPage from './menu/menu-page.component';
 
 export const PAGE_OBJECTS = {
   Home: HomePage,

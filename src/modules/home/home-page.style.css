@@ -4,11 +4,18 @@
   justify-content: space-evenly;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .details-container {
     flex-direction: column;
     align-items: center;
     padding: 1em;
-    width: 100%;
+  }
+
+  .details-container > .card {
+    min-width: 300px;
+  }
+
+  .details-container > .card:first-of-type {
+    margin-top: 0;
   }
 }

@@ -1,0 +1,20 @@
+.contacts-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 1200px) {
+  .contacts-container > .card {
+    width: 50%;
+    min-width: 300px;
+    margin: 1em;
+  }
+
+  .contacts-container > .card:first-of-type {
+    margin-top: 0;
+  }
+}

@@ -1,4 +1,4 @@
-import './menu.style.css';
+import './menu-page.style.css';
 
 export default function MenuPage(): Node {
   const menuPage: HTMLElement = document.createElement('div');

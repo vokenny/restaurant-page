@@ -1,4 +1,4 @@
-import './home.style.css';
+import './home-page.style.css';
 
 import Address from '../../components/address/address.component';
 import HeroCarousel from '../../components/hero-carousel/hero-carousel.component';

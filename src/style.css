@@ -38,6 +38,14 @@ body {
   align-items: center;
 }
 
+.main > * {
+  width: 80vw;
+}
+
+h1 {
+  text-align: center;
+}
+
 .link {
   font-style: normal;
   text-align: center;
