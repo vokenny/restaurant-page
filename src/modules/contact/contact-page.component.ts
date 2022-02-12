@@ -30,15 +30,15 @@ export default function ContactPage(): Node {
   const title: Node = document.createElement('h1');
   title.textContent = 'Contact';
 
-  const contactsContainer = document.createElement('div');
+  const contactsContainer: HTMLDivElement = document.createElement('div');
   contactsContainer.classList.add('contacts-container');
 
   const contactCardElems: Node[] = CONTACTS.map((contact: Contact): Node => {
     const cardContent: HTMLDivElement = document.createElement('div');
 
     const pElems: HTMLParagraphElement[] = Object.entries(contact)
-      .filter(([key, _]) => key !== 'name')
-      .map(([_, value]) => {
+      .filter(([key, _]): boolean => key !== 'name')
+      .map(([_, value]): HTMLParagraphElement => {
         const pElem: HTMLParagraphElement = document.createElement('p');
         pElem.textContent = value;
 
