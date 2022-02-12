@@ -10,7 +10,7 @@ export default function HeroCarousel(): Node {
   const heroCtrl = HeroCarouselController();
 
   const heroCarouselElem: HTMLDivElement = document.createElement('div');
-  heroCarouselElem.classList.add('hero-carousel', 'tile');
+  heroCarouselElem.classList.add('hero-carousel', 'tile', 'shadow');
 
   function createHeroImgElem(source: any, idx: number): HTMLDivElement {
     const heroImgElem: HTMLImageElement = new Image();

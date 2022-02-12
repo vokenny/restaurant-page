@@ -3,7 +3,7 @@ import Octocat from '../../assets/GitHub-Mark-Light-32px.png';
 
 export default function Footer(): Node {
   const footerElem: HTMLElement = document.createElement('footer');
-  footerElem.classList.add('footer');
+  footerElem.classList.add('footer', 'shadow');
 
   const githubLink: HTMLAnchorElement = document.createElement('a');
   githubLink.classList.add('link', 'github-link');

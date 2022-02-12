@@ -1,6 +1,6 @@
 :root {
-  --main-bg: #48686f;
-  --banner-bg: #283d3e;
+  --main-bg: #a0ccbd;
+  --banner-bg: #0f6631;
   --primary-color: #ffffc0;
 }
 
@@ -42,10 +42,6 @@ body {
   width: 80vw;
 }
 
-h1 {
-  text-align: center;
-}
-
 .link {
   font-style: normal;
   text-align: center;
@@ -66,5 +62,8 @@ h1 {
   border: var(--primary-color) 2px solid;
   overflow: hidden;
   background-color: var(--banner-bg);
+}
+
+.shadow {
   box-shadow: 0 8px 32px 0 rgba(0, 60, 3, 0.5);
 }

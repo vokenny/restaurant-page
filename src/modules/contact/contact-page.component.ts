@@ -27,9 +27,6 @@ export default function ContactPage(): Node {
   const contactPage: HTMLElement = document.createElement('div');
   contactPage.classList.add('contacts');
 
-  const title: Node = document.createElement('h1');
-  title.textContent = 'Contact';
-
   const contactsContainer: HTMLDivElement = document.createElement('div');
   contactsContainer.classList.add('contacts-container');
 
@@ -51,8 +48,7 @@ export default function ContactPage(): Node {
   });
 
   contactsContainer.append(...contactCardElems);
-
-  contactPage.append(title, contactsContainer);
+  contactPage.append(contactsContainer);
 
   return contactPage;
 }

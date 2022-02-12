@@ -7,7 +7,7 @@ export default function Navbar(): Node {
   const navbarCtrl = NavbarController();
 
   const navElem: HTMLElement = document.createElement('nav');
-  navElem.classList.add('navbar');
+  navElem.classList.add('navbar', 'shadow');
 
   const navLinkContainer: HTMLUListElement = document.createElement('ul');
   navLinkContainer.classList.add('nav-links');
