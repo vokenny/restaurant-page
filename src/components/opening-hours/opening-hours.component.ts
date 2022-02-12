@@ -1,6 +1,6 @@
 import './opening-hours.style.css';
 
-import Details from '../details/details.component';
+import Card from '../card/card.component';
 
 export default function OpeningHours(): Node {
   const OPENING_HOURS = {
@@ -28,5 +28,5 @@ export default function OpeningHours(): Node {
 
   contentElem.append(...listElems);
 
-  return Details('Opening hours', contentElem);
+  return Card('Opening hours', contentElem);
 }

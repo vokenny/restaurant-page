@@ -1,4 +1,4 @@
-import Details from '../details/details.component';
+import Card from '../card/card.component';
 
 export default function Address(): Node {
   const ADDRESS: string = `123 Mozzarrella Street
@@ -16,5 +16,5 @@ export default function Address(): Node {
 
   contentElem.append(...pElems);
 
-  return Details('Where to find us', contentElem);
+  return Card('Where to find us', contentElem);
 }

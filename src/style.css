@@ -52,3 +52,11 @@ body {
   text-decoration: underline;
   --offset: 0.4em;
 }
+
+.tile {
+  border-radius: 0px 15%;
+  border: var(--primary-color) 2px solid;
+  overflow: hidden;
+  background-color: var(--banner-bg);
+  box-shadow: 0 8px 32px 0 rgba(0, 60, 3, 0.5);
+}
