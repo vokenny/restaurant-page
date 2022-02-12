@@ -1,0 +1,14 @@
+.img-card {
+  margin: 1em;
+  max-width: 500px;
+  text-align: center;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  font-weight: bolder;
+}
